@@ -10,10 +10,10 @@ from core import BASE_URL
 
 def parse_b2b_center_selenium(url, max_items=100):
     options = Options()
-    options.add_argument("--headless=new")  # ← новый стабильный headless режим
-    options.add_argument("--disable-gpu")  # ← полезен для Windows
-    options.add_argument("--no-sandbox")  # ← для Linux/CI
-    options.add_argument("--window-size=1920,1080")  # ← нужно, если элементы исчезают в headless
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--window-size=1920,1080")
     options.headless = True
     driver = webdriver.Chrome(options=options)
     tenders = []
